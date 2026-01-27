@@ -95,19 +95,19 @@ foreach ($students as $s) {
         margin-bottom: 2rem;
         box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
     }
-    
+
     .page-header h2 {
         font-weight: 700;
         margin-bottom: 0.5rem;
         font-size: 2rem;
     }
-    
+
     .page-header p {
         opacity: 0.95;
         margin-bottom: 0;
         font-size: 1.05rem;
     }
-    
+
     .add-student-card {
         background: white;
         border-radius: 15px;
@@ -116,7 +116,7 @@ foreach ($students as $s) {
         border: none;
         height: 100%;
     }
-    
+
     .add-student-card h5 {
         font-weight: 700;
         color: #2d3748;
@@ -126,11 +126,11 @@ foreach ($students as $s) {
         align-items: center;
         gap: 0.5rem;
     }
-    
+
     .add-student-card h5 i {
         color: #667eea;
     }
-    
+
     .students-list-card {
         background: white;
         border-radius: 15px;
@@ -138,34 +138,36 @@ foreach ($students as $s) {
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
         border: none;
     }
-    
+
     .students-list-card h5 {
         font-weight: 700;
         color: #2d3748;
         margin-bottom: 0;
         font-size: 1.4rem;
     }
-    
+
     .form-label {
         font-weight: 600;
         color: #4a5568;
         margin-bottom: 0.5rem;
         font-size: 0.9rem;
     }
-    
-    .form-control, .form-select {
+
+    .form-control,
+    .form-select {
         border: 2px solid #e2e8f0;
         border-radius: 10px;
         padding: 0.65rem 1rem;
         transition: all 0.3s ease;
         font-size: 0.95rem;
     }
-    
-    .form-control:focus, .form-select:focus {
+
+    .form-control:focus,
+    .form-select:focus {
         border-color: #667eea;
         box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
     }
-    
+
     .btn-primary-custom {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         border: none;
@@ -176,12 +178,12 @@ foreach ($students as $s) {
         transition: all 0.3s ease;
         box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
     }
-    
+
     .btn-primary-custom:hover {
         transform: translateY(-2px);
         box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
     }
-    
+
     .filter-badge {
         background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         color: white;
@@ -193,19 +195,19 @@ foreach ($students as $s) {
         align-items: center;
         gap: 0.5rem;
     }
-    
+
     .search-filter-section {
         background: #f7fafc;
         padding: 1.25rem;
         border-radius: 12px;
         margin-bottom: 1.5rem;
     }
-    
+
     .table-custom {
         border-collapse: separate;
         border-spacing: 0;
     }
-    
+
     .table-custom thead th {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
@@ -216,33 +218,33 @@ foreach ($students as $s) {
         padding: 1rem;
         border: none;
     }
-    
+
     .table-custom thead th:first-child {
         border-radius: 10px 0 0 0;
     }
-    
+
     .table-custom thead th:last-child {
         border-radius: 0 10px 0 0;
     }
-    
+
     .table-custom tbody tr {
         transition: all 0.3s ease;
         background: white;
     }
-    
+
     .table-custom tbody tr:hover {
         background: #f7fafc;
         transform: scale(1.01);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
-    
+
     .table-custom tbody td {
         padding: 1rem;
         vertical-align: middle;
         border-bottom: 1px solid #e2e8f0;
         font-size: 0.95rem;
     }
-    
+
     .student-id-badge {
         background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         color: white;
@@ -252,7 +254,7 @@ foreach ($students as $s) {
         font-size: 0.85rem;
         display: inline-block;
     }
-    
+
     .class-badge {
         background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
         color: white;
@@ -261,7 +263,7 @@ foreach ($students as $s) {
         font-weight: 600;
         font-size: 0.8rem;
     }
-    
+
     .btn-edit-custom {
         background: white;
         color: #667eea;
@@ -272,13 +274,13 @@ foreach ($students as $s) {
         font-size: 0.85rem;
         transition: all 0.3s ease;
     }
-    
+
     .btn-edit-custom:hover {
         background: #667eea;
         color: white;
         transform: translateY(-2px);
     }
-    
+
     .btn-delete-custom {
         background: white;
         color: #f5576c;
@@ -289,13 +291,13 @@ foreach ($students as $s) {
         font-size: 0.85rem;
         transition: all 0.3s ease;
     }
-    
+
     .btn-delete-custom:hover {
         background: #f5576c;
         color: white;
         transform: translateY(-2px);
     }
-    
+
     .alert-custom {
         border-radius: 12px;
         border: none;
@@ -303,54 +305,54 @@ foreach ($students as $s) {
         font-weight: 500;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
-    
+
     .alert-success-custom {
         background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
         color: #065f46;
     }
-    
+
     .alert-info-custom {
         background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
         color: #1e40af;
     }
-    
+
     .modal-content {
         border-radius: 15px;
         border: none;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     }
-    
+
     .modal-header {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
         border-radius: 15px 15px 0 0;
         padding: 1.5rem;
     }
-    
+
     .modal-title {
         font-weight: 700;
         font-size: 1.3rem;
     }
-    
+
     .modal-body {
         padding: 2rem;
     }
-    
+
     .modal-footer {
         padding: 1.5rem 2rem;
         border-top: 1px solid #e2e8f0;
     }
-    
+
     .btn-close {
         filter: brightness(0) invert(1);
     }
-    
+
     .pagination-info {
         color: #718096;
         font-size: 0.9rem;
         font-weight: 500;
     }
-    
+
     .btn-pagination {
         border: 2px solid #e2e8f0;
         color: #4a5568;
@@ -358,42 +360,43 @@ foreach ($students as $s) {
         border-radius: 8px;
         transition: all 0.3s ease;
     }
-    
+
     .btn-pagination:hover {
         border-color: #667eea;
         color: #667eea;
         background: #f7fafc;
     }
-    
+
     .empty-state {
         padding: 3rem;
         text-align: center;
         color: #a0aec0;
     }
-    
+
     .empty-state i {
         font-size: 4rem;
         margin-bottom: 1rem;
         opacity: 0.3;
     }
-    
+
     @media (max-width: 768px) {
         .page-header {
             padding: 1.5rem;
         }
-        
+
         .page-header h2 {
             font-size: 1.5rem;
         }
-        
-        .add-student-card, .students-list-card {
+
+        .add-student-card,
+        .students-list-card {
             padding: 1.5rem;
         }
-        
+
         .table-custom {
             font-size: 0.85rem;
         }
-        
+
         .table-custom thead th,
         .table-custom tbody td {
             padding: 0.75rem 0.5rem;
@@ -446,7 +449,7 @@ foreach ($students as $s) {
             </form>
         </div>
     </div>
-    
+
     <div class="col-lg-8">
         <div class="students-list-card">
             <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
@@ -460,7 +463,8 @@ foreach ($students as $s) {
             <div class="search-filter-section">
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <input id="studentSearch" type="text" class="form-control" placeholder="🔍 Search by ID or Name...">
+                        <input id="studentSearch" type="text" class="form-control"
+                            placeholder="🔍 Search by ID or Name...">
                     </div>
                     <div class="col-md-3">
                         <select id="filterClass" class="form-select">
@@ -484,53 +488,49 @@ foreach ($students as $s) {
             <div class="table-responsive">
                 <table class="table table-custom" id="studentsTable">
                     <thead>
-                    <tr>
-                        <th><i class="bi bi-hash me-1"></i>Student ID</th>
-                        <th><i class="bi bi-person me-1"></i>Name</th>
-                        <th><i class="bi bi-book me-1"></i>Class</th>
-                        <th><i class="bi bi-grid me-1"></i>Section</th>
-                        <th><i class="bi bi-envelope me-1"></i>Email</th>
-                        <th class="text-end"><i class="bi bi-gear me-1"></i>Actions</th>
-                    </tr>
+                        <tr>
+                            <th><i class="bi bi-hash me-1"></i>Student ID</th>
+                            <th><i class="bi bi-person me-1"></i>Name</th>
+                            <th><i class="bi bi-book me-1"></i>Class</th>
+                            <th><i class="bi bi-grid me-1"></i>Section</th>
+                            <th><i class="bi bi-envelope me-1"></i>Email</th>
+                            <th class="text-end"><i class="bi bi-gear me-1"></i>Actions</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    <?php foreach ($students as $s): ?>
-                        <tr class="student-row"
-                            data-id="<?php echo e($s['student_id']); ?>"
-                            data-name="<?php echo e($s['name']); ?>"
-                            data-class="<?php echo e($s['class']); ?>"
-                            data-section="<?php echo e($s['section']); ?>"
-                            data-email="<?php echo e($s['email']); ?>"
-                        >
-                            <td><span class="student-id-badge"><?php echo e($s['student_id']); ?></span></td>
-                            <td><strong><?php echo e($s['name']); ?></strong></td>
-                            <td><span class="class-badge"><?php echo e($s['class']); ?></span></td>
-                            <td><strong><?php echo e($s['section']); ?></strong></td>
-                            <td><?php echo e($s['email'] ?: '—'); ?></td>
-                            <td class="text-end">
-                                <button type="button" class="btn btn-edit-custom btn-sm student-edit-btn me-1"
+                        <?php foreach ($students as $s): ?>
+                            <tr class="student-row" data-id="<?php echo e($s['student_id']); ?>"
+                                data-name="<?php echo e($s['name']); ?>" data-class="<?php echo e($s['class']); ?>"
+                                data-section="<?php echo e($s['section']); ?>" data-email="<?php echo e($s['email']); ?>">
+                                <td><span class="student-id-badge"><?php echo e($s['student_id']); ?></span></td>
+                                <td><strong><?php echo e($s['name']); ?></strong></td>
+                                <td><span class="class-badge"><?php echo e($s['class']); ?></span></td>
+                                <td><strong><?php echo e($s['section']); ?></strong></td>
+                                <td><?php echo e($s['email'] ?: '—'); ?></td>
+                                <td class="text-end">
+                                    <button type="button" class="btn btn-edit-custom btn-sm student-edit-btn me-1"
                                         data-bs-toggle="modal" data-bs-target="#editStudentModal"
                                         data-id="<?php echo e($s['student_id']); ?>"
-                                        data-name="<?php echo e($s['name']); ?>"
-                                        data-class="<?php echo e($s['class']); ?>"
+                                        data-name="<?php echo e($s['name']); ?>" data-class="<?php echo e($s['class']); ?>"
                                         data-section="<?php echo e($s['section']); ?>"
                                         data-email="<?php echo e($s['email']); ?>">
-                                    <i class="bi bi-pencil-fill me-1"></i>Edit
-                                </button>
-                                <a href="?delete=<?php echo e($s['student_id']); ?>" class="btn btn-delete-custom btn-sm" data-confirm="Delete this student?">
-                                    <i class="bi bi-trash-fill me-1"></i>Delete
-                                </a>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                    <?php if (!$students): ?>
-                        <tr>
-                            <td colspan="6" class="empty-state">
-                                <i class="bi bi-inbox"></i>
-                                <p class="mb-0">No students added yet. Start by adding your first student!</p>
-                            </td>
-                        </tr>
-                    <?php endif; ?>
+                                        <i class="bi bi-pencil-fill me-1"></i>Edit
+                                    </button>
+                                    <a href="?delete=<?php echo e($s['student_id']); ?>"
+                                        class="btn btn-delete-custom btn-sm" data-confirm="Delete this student?">
+                                        <i class="bi bi-trash-fill me-1"></i>Delete
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                        <?php if (!$students): ?>
+                            <tr>
+                                <td colspan="6" class="empty-state">
+                                    <i class="bi bi-inbox"></i>
+                                    <p class="mb-0">No students added yet. Start by adding your first student!</p>
+                                </td>
+                            </tr>
+                        <?php endif; ?>
                     </tbody>
                 </table>
             </div>
@@ -565,7 +565,8 @@ foreach ($students as $s) {
                     <div class="row g-3">
                         <div class="col-12">
                             <label class="form-label"><i class="bi bi-hash me-1"></i>Student ID</label>
-                            <input type="text" class="form-control" id="edit-student-id-display" readonly style="background: #f7fafc;">
+                            <input type="text" class="form-control" id="edit-student-id-display" readonly
+                                style="background: #f7fafc;">
                         </div>
                         <div class="col-12">
                             <label class="form-label"><i class="bi bi-person me-1"></i>Full Name</label>
@@ -585,7 +586,8 @@ foreach ($students as $s) {
                         </div>
                         <div class="col-12">
                             <label class="form-label"><i class="bi bi-key me-1"></i>New Password</label>
-                            <input type="text" name="new_password" class="form-control" placeholder="Leave blank to keep current password">
+                            <input type="text" name="new_password" class="form-control"
+                                placeholder="Leave blank to keep current password">
                             <small class="text-muted">Only fill this if you want to change the password</small>
                         </div>
                     </div>
@@ -606,7 +608,7 @@ foreach ($students as $s) {
 <script>
     // Edit button handler
     document.querySelectorAll('.student-edit-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
             document.getElementById('edit-student-id').value = this.dataset.id;
             document.getElementById('edit-student-id-display').value = this.dataset.id;
             document.getElementById('edit-name').value = this.dataset.name;
@@ -615,15 +617,8 @@ foreach ($students as $s) {
             document.getElementById('edit-email').value = this.dataset.email;
         });
     });
-    
-    // Delete confirmation
-    document.querySelectorAll('[data-confirm]').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            if (!confirm(this.dataset.confirm)) {
-                e.preventDefault();
-            }
-        });
-    });
+
+
 </script>
 
 <?php require_once __DIR__ . '/../includes/footer.php'; ?>

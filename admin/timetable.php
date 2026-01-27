@@ -5,7 +5,7 @@ requireAdmin();
 
 $message = '';
 $days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-$fixed_slots = ['08:00 - 09:00','09:00 - 10:00','10:00 - 11:00','11:00 - 12:00','12:00 - 13:00'];
+$fixed_slots = ['08:00 - 09:00', '09:00 - 10:00', '10:00 - 11:00', '11:00 - 12:00', '12:00 - 13:00'];
 
 // Currently selected class/section (for grid)
 $selected_class = $_GET['class'] ?? $_POST['class'] ?? '';
@@ -94,19 +94,19 @@ if ($selected_class && $selected_section) {
         margin-bottom: 2rem;
         box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
     }
-    
+
     .page-header h2 {
         font-weight: 700;
         margin-bottom: 0.5rem;
         font-size: 2rem;
     }
-    
+
     .page-header p {
         opacity: 0.95;
         margin-bottom: 0;
         font-size: 1.05rem;
     }
-    
+
     .selector-card {
         background: white;
         border-radius: 15px;
@@ -115,7 +115,7 @@ if ($selected_class && $selected_section) {
         border: none;
         height: 100%;
     }
-    
+
     .selector-card h5 {
         font-weight: 700;
         color: #2d3748;
@@ -125,11 +125,11 @@ if ($selected_class && $selected_section) {
         align-items: center;
         gap: 0.5rem;
     }
-    
+
     .selector-card h5 i {
         color: #667eea;
     }
-    
+
     .timetable-card {
         background: white;
         border-radius: 15px;
@@ -137,14 +137,14 @@ if ($selected_class && $selected_section) {
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
         border: none;
     }
-    
+
     .timetable-card h5 {
         font-weight: 700;
         color: #2d3748;
         margin-bottom: 0;
         font-size: 1.3rem;
     }
-    
+
     .class-section-badge {
         background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         color: white;
@@ -156,27 +156,29 @@ if ($selected_class && $selected_section) {
         align-items: center;
         gap: 0.5rem;
     }
-    
+
     .form-label {
         font-weight: 600;
         color: #4a5568;
         margin-bottom: 0.5rem;
         font-size: 0.9rem;
     }
-    
-    .form-control, .form-select {
+
+    .form-control,
+    .form-select {
         border: 2px solid #e2e8f0;
         border-radius: 10px;
         padding: 0.65rem 1rem;
         transition: all 0.3s ease;
         font-size: 0.95rem;
     }
-    
-    .form-control:focus, .form-select:focus {
+
+    .form-control:focus,
+    .form-select:focus {
         border-color: #667eea;
         box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
     }
-    
+
     .btn-load-timetable {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         border: none;
@@ -187,20 +189,20 @@ if ($selected_class && $selected_section) {
         transition: all 0.3s ease;
         box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
     }
-    
+
     .btn-load-timetable:hover {
         transform: translateY(-2px);
         box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
         color: white;
     }
-    
+
     .time-slots-info {
         background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
         border-radius: 12px;
         padding: 1.25rem;
         margin-top: 1.5rem;
     }
-    
+
     .time-slots-info h6 {
         font-weight: 700;
         color: #2d3748;
@@ -210,32 +212,32 @@ if ($selected_class && $selected_section) {
         align-items: center;
         gap: 0.5rem;
     }
-    
+
     .time-slots-info ul {
         margin-bottom: 0;
         padding-left: 1.25rem;
     }
-    
+
     .time-slots-info li {
         color: #4a5568;
         font-size: 0.9rem;
         margin-bottom: 0.4rem;
         font-weight: 500;
     }
-    
+
     .timetable-grid-wrapper {
         overflow-x: auto;
         border-radius: 12px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     }
-    
+
     .timetable-table {
         margin-bottom: 0;
         border-collapse: separate;
         border-spacing: 0;
         width: 100%;
     }
-    
+
     .timetable-table thead th {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
@@ -250,17 +252,17 @@ if ($selected_class && $selected_section) {
         top: 0;
         z-index: 10;
     }
-    
+
     .timetable-table thead th:first-child {
         border-radius: 12px 0 0 0;
         text-align: left;
         padding-left: 1.25rem;
     }
-    
+
     .timetable-table thead th:last-child {
         border-radius: 0 12px 0 0;
     }
-    
+
     .timetable-table tbody th {
         background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         color: white;
@@ -271,7 +273,7 @@ if ($selected_class && $selected_section) {
         text-align: left;
         white-space: nowrap;
     }
-    
+
     .timetable-table tbody td {
         background: white;
         padding: 1rem 0.75rem;
@@ -281,13 +283,13 @@ if ($selected_class && $selected_section) {
         min-width: 150px;
         transition: all 0.3s ease;
     }
-    
+
     .timetable-table tbody td:hover {
         background: #f7fafc;
         transform: scale(1.02);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
-    
+
     .subject-pill {
         background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         color: white;
@@ -299,7 +301,7 @@ if ($selected_class && $selected_section) {
         margin-bottom: 0.5rem;
         box-shadow: 0 2px 8px rgba(79, 172, 254, 0.3);
     }
-    
+
     .btn-add-slot {
         background: white;
         color: #667eea;
@@ -310,14 +312,14 @@ if ($selected_class && $selected_section) {
         font-size: 0.85rem;
         transition: all 0.3s ease;
     }
-    
+
     .btn-add-slot:hover {
         background: #667eea;
         color: white;
         border-style: solid;
         transform: translateY(-2px);
     }
-    
+
     .btn-edit-slot {
         background: white;
         color: #667eea;
@@ -328,13 +330,13 @@ if ($selected_class && $selected_section) {
         font-size: 0.8rem;
         transition: all 0.3s ease;
     }
-    
+
     .btn-edit-slot:hover {
         background: #667eea;
         color: white;
         transform: translateY(-2px);
     }
-    
+
     .btn-clear-slot {
         background: white;
         color: #f5576c;
@@ -345,25 +347,25 @@ if ($selected_class && $selected_section) {
         font-size: 0.8rem;
         transition: all 0.3s ease;
     }
-    
+
     .btn-clear-slot:hover {
         background: #f5576c;
         color: white;
         transform: translateY(-2px);
     }
-    
+
     .empty-timetable {
         text-align: center;
         padding: 3rem;
         color: #a0aec0;
     }
-    
+
     .empty-timetable i {
         font-size: 4rem;
         margin-bottom: 1rem;
         opacity: 0.3;
     }
-    
+
     .alert-custom {
         border-radius: 12px;
         border: none;
@@ -372,35 +374,35 @@ if ($selected_class && $selected_section) {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         margin-bottom: 1.5rem;
     }
-    
+
     .alert-success-custom {
         background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
         color: #065f46;
     }
-    
+
     .alert-info-custom {
         background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
         color: #1e40af;
     }
-    
+
     .alert-warning-custom {
         background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
         color: #92400e;
     }
-    
+
     .modal-content {
         border-radius: 15px;
         border: none;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     }
-    
+
     .modal-header {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
         border-radius: 15px 15px 0 0;
         padding: 1.5rem;
     }
-    
+
     .modal-title {
         font-weight: 700;
         font-size: 1.3rem;
@@ -408,20 +410,20 @@ if ($selected_class && $selected_section) {
         align-items: center;
         gap: 0.5rem;
     }
-    
+
     .modal-body {
         padding: 2rem;
     }
-    
+
     .modal-footer {
         padding: 1.5rem 2rem;
         border-top: 1px solid #e2e8f0;
     }
-    
+
     .btn-close {
         filter: brightness(0) invert(1);
     }
-    
+
     .slot-info-badge {
         background: #f7fafc;
         padding: 0.75rem 1rem;
@@ -431,27 +433,28 @@ if ($selected_class && $selected_section) {
         font-weight: 600;
         font-size: 0.95rem;
     }
-    
+
     @media (max-width: 768px) {
         .page-header {
             padding: 1.5rem;
         }
-        
+
         .page-header h2 {
             font-size: 1.5rem;
         }
-        
-        .selector-card, .timetable-card {
+
+        .selector-card,
+        .timetable-card {
             padding: 1.5rem;
         }
-        
+
         .timetable-table thead th,
         .timetable-table tbody th,
         .timetable-table tbody td {
             padding: 0.75rem 0.5rem;
             font-size: 0.85rem;
         }
-        
+
         .subject-pill {
             font-size: 0.8rem;
             padding: 0.4rem 0.8rem;
@@ -517,7 +520,7 @@ if ($selected_class && $selected_section) {
                     </button>
                 </div>
             </form>
-            
+
             <div class="time-slots-info">
                 <h6><i class="bi bi-clock-fill"></i>Time Slots</h6>
                 <ul>
@@ -528,7 +531,7 @@ if ($selected_class && $selected_section) {
             </div>
         </div>
     </div>
-    
+
     <div class="col-lg-9">
         <div class="timetable-card">
             <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
@@ -540,68 +543,59 @@ if ($selected_class && $selected_section) {
                     </span>
                 <?php endif; ?>
             </div>
-            
+
             <?php if (!$selected_class || !$selected_section): ?>
                 <div class="empty-timetable">
                     <i class="bi bi-calendar-x"></i>
                     <h5>No Timetable Selected</h5>
-                    <p class="mb-0">Please select a class and section from the left panel to view and manage the timetable.</p>
+                    <p class="mb-0">Please select a class and section from the left panel to view and manage the timetable.
+                    </p>
                 </div>
             <?php else: ?>
                 <div class="timetable-grid-wrapper">
                     <table class="timetable-table">
                         <thead>
-                        <tr>
-                            <th><i class="bi bi-calendar-day me-1"></i>Day</th>
-                            <?php foreach ($fixed_slots as $slot): ?>
-                                <th><i class="bi bi-clock me-1"></i><?php echo e($slot); ?></th>
-                            <?php endforeach; ?>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php foreach ($days as $day): ?>
                             <tr>
-                                <th><?php echo e($day); ?></th>
-                                <?php foreach ($fixed_slots as $slot): 
-                                    $subject = $grid[$day][$slot] ?? '';
-                                    ?>
-                                    <td>
-                                        <?php if ($subject): ?>
-                                            <div class="subject-pill"><?php echo e($subject); ?></div>
-                                            <div class="d-flex gap-1 justify-content-center">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-edit-slot timetable-edit-btn"
-                                                    data-day="<?php echo e($day); ?>"
-                                                    data-slot="<?php echo e($slot); ?>"
-                                                    data-subject="<?php echo e($subject); ?>"
-                                                    data-class="<?php echo e($selected_class); ?>"
-                                                    data-section="<?php echo e($selected_section); ?>"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#timetableSlotModal"
-                                                ><i class="bi bi-pencil-fill"></i> Edit</button>
-                                                <a href="?class=<?php echo urlencode($selected_class); ?>&section=<?php echo urlencode($selected_section); ?>&day=<?php echo urlencode($day); ?>&slot=<?php echo urlencode($slot); ?>&clear=1" 
-                                                   class="btn btn-clear-slot" 
-                                                   data-confirm="Clear this slot?"
-                                                ><i class="bi bi-trash-fill"></i> Clear</a>
-                                            </div>
-                                        <?php else: ?>
-                                            <button
-                                                type="button"
-                                                class="btn btn-add-slot timetable-edit-btn"
-                                                data-day="<?php echo e($day); ?>"
-                                                data-slot="<?php echo e($slot); ?>"
-                                                data-subject=""
-                                                data-class="<?php echo e($selected_class); ?>"
-                                                data-section="<?php echo e($selected_section); ?>"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#timetableSlotModal"
-                                            ><i class="bi bi-plus-circle me-1"></i>Add Subject</button>
-                                        <?php endif; ?>
-                                    </td>
+                                <th><i class="bi bi-calendar-day me-1"></i>Day</th>
+                                <?php foreach ($fixed_slots as $slot): ?>
+                                    <th><i class="bi bi-clock me-1"></i><?php echo e($slot); ?></th>
                                 <?php endforeach; ?>
                             </tr>
-                        <?php endforeach; ?>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($days as $day): ?>
+                                <tr>
+                                    <th><?php echo e($day); ?></th>
+                                    <?php foreach ($fixed_slots as $slot):
+                                        $subject = $grid[$day][$slot] ?? '';
+                                        ?>
+                                        <td>
+                                            <?php if ($subject): ?>
+                                                <div class="subject-pill"><?php echo e($subject); ?></div>
+                                                <div class="d-flex gap-1 justify-content-center">
+                                                    <button type="button" class="btn btn-edit-slot timetable-edit-btn"
+                                                        data-day="<?php echo e($day); ?>" data-slot="<?php echo e($slot); ?>"
+                                                        data-subject="<?php echo e($subject); ?>"
+                                                        data-class="<?php echo e($selected_class); ?>"
+                                                        data-section="<?php echo e($selected_section); ?>" data-bs-toggle="modal"
+                                                        data-bs-target="#timetableSlotModal"><i class="bi bi-pencil-fill"></i>
+                                                        Edit</button>
+                                                    <a href="?class=<?php echo urlencode($selected_class); ?>&section=<?php echo urlencode($selected_section); ?>&day=<?php echo urlencode($day); ?>&slot=<?php echo urlencode($slot); ?>&clear=1"
+                                                        class="btn btn-clear-slot" data-confirm="Clear this slot?"><i
+                                                            class="bi bi-trash-fill"></i> Clear</a>
+                                                </div>
+                                            <?php else: ?>
+                                                <button type="button" class="btn btn-add-slot timetable-edit-btn"
+                                                    data-day="<?php echo e($day); ?>" data-slot="<?php echo e($slot); ?>"
+                                                    data-subject="" data-class="<?php echo e($selected_class); ?>"
+                                                    data-section="<?php echo e($selected_section); ?>" data-bs-toggle="modal"
+                                                    data-bs-target="#timetableSlotModal"><i class="bi bi-plus-circle me-1"></i>Add
+                                                    Subject</button>
+                                            <?php endif; ?>
+                                        </td>
+                                    <?php endforeach; ?>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
@@ -630,13 +624,8 @@ if ($selected_class && $selected_section) {
                     </div>
                     <div class="mb-3">
                         <label class="form-label"><i class="bi bi-book me-1"></i>Subject Name</label>
-                        <input list="subjectOptions" 
-                               type="text" 
-                               name="subject" 
-                               id="tt-subject" 
-                               class="form-control" 
-                               placeholder="Enter or select subject"
-                               required>
+                        <input list="subjectOptions" type="text" name="subject" id="tt-subject" class="form-control"
+                            placeholder="Enter or select subject" required>
                         <datalist id="subjectOptions">
                             <?php foreach (array_keys($subjects) as $subj): ?>
                                 <option value="<?php echo e($subj); ?>"></option>
@@ -663,31 +652,24 @@ if ($selected_class && $selected_section) {
 <script>
     // Handle edit/add button clicks
     document.querySelectorAll('.timetable-edit-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
             const day = this.dataset.day;
             const slot = this.dataset.slot;
             const subject = this.dataset.subject;
             const classVal = this.dataset.class;
             const section = this.dataset.section;
-            
+
             document.getElementById('tt-class').value = classVal;
             document.getElementById('tt-section').value = section;
             document.getElementById('tt-day').value = day;
             document.getElementById('tt-slot').value = slot;
             document.getElementById('tt-subject').value = subject;
-            document.getElementById('tt-label').innerHTML = 
+            document.getElementById('tt-label').innerHTML =
                 `<i class="bi bi-info-circle me-2"></i><strong>${day}</strong> • <strong>${slot}</strong> • Class ${classVal}-${section}`;
         });
     });
-    
-    // Delete confirmation
-    document.querySelectorAll('[data-confirm]').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            if (!confirm(this.dataset.confirm)) {
-                e.preventDefault();
-            }
-        });
-    });
+
+
 </script>
 
 <?php require_once __DIR__ . '/../includes/footer.php'; ?>
